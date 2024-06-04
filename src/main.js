@@ -5,6 +5,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import getImages from './js/pixabay-api';
+import imageTemplate from './js/render-functions';
 
 const refs = {
   formEl: document.querySelector('.js-form'),
@@ -15,9 +16,10 @@ refs.formEl.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
   e.preventDefault();
-  console.dir(e.target);
-  //  console.log(e.target);
-}
+  const form = e.target;
+  const query = form.elements.query.value;
+  if (query.trim() === '') return;
 
-getImages('cat').then(data => console.log(data));
-getImages('dog').then(data => console.log(data));
+  getImages(query).then(data => console.log(data));
+  form.reset();
+}

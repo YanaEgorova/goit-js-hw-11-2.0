@@ -20,6 +20,15 @@ function onFormSubmit(e) {
   const query = form.elements.query.value;
   if (query.trim() === '') return;
 
-  getImages(query).then(data => console.log(data));
+  getImages(query).then(data => renderImages(data.hits));
   form.reset();
+}
+
+function renderImages(images) {
+  console.log(images);
+  const markup = images.map(imageTemplate).join('');
+
+  refs.listEl.innerHTML = markup;
+  //   const markup = imageTemplate(image);
+  //   refs.listEl.innerHTML = markup;
 }

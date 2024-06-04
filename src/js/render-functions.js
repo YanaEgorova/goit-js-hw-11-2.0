@@ -7,6 +7,8 @@ export default function imageTemplate({
   comments,
   downloads,
 }) {
+  console.log(webformatURL);
+  console.log(largeImageURL);
   return `
       <div class="gallery">
       <a href="${webformatURL}"><img src="${webformatURL}" alt="" title=""/></a>

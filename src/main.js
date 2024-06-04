@@ -12,6 +12,9 @@ const refs = {
   listEl: document.querySelector('.js-list'),
 };
 
+// const lightbox = new SimpleLightbox(refs.listEl);
+// console.log(lightbox);
+
 refs.formEl.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {

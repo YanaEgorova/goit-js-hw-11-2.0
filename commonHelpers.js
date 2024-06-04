@@ -2,10 +2,11 @@ import{S as l}from"./assets/vendor-5af972a3.js";(function(){const o=document.cre
       <div class="image-block">
       <a href="${o}">
       <img src="${r}" alt="" title=""/>
-        <p>Likes<span>${s}</span></p>
+      <div class="bottom">
+              <p>Likes<span>${s}</span></p>
        <p>Views<span>${e}</span></p>
         <p>Comments<span>${t}</span></p>
-         <p>Downloads<span>${i}</span></p>
+         <p>Downloads<span>${i}</span></p></div>
       </a>
   </div>
     `}const c={formEl:document.querySelector(".js-form"),listEl:document.querySelector(".js-list")};new l(".js-list");c.formEl.addEventListener("submit",p);function p(r){r.preventDefault();const o=r.target,n=o.elements.query.value;n.trim()!==""&&(a(n).then(s=>f(s.hits)),o.reset())}function f(r){console.log(r);const o=r.map(u).join("");c.listEl.innerHTML=o}

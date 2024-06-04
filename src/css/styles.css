@@ -21,3 +21,23 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.image-block {
+  width: 360px;
+  height: 200px;
+  border: 2px solid black;
+}
+.image-block img {
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
+}
+.bottom {
+  display: flex;
+  justify-content: space-around;
+}
+.bottom p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

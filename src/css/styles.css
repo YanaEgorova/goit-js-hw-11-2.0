@@ -21,7 +21,14 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+.gallery {
+  max-width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px 0;
+}
 .image-block {
   width: 360px;
   height: 200px;
